@@ -7,7 +7,7 @@ This is a work in progress
 - [x] Write initial extraction scripts
 - [ ] Create batchfiles for each supported disc
 - [ ] Build LibVLCSharp-based video player
-- [x] Write Menu interaction scripting
+- [ ] Write Menu interaction scripting
 ### Potential Features
 - [ ] Unified Launcher
 - [ ] Mix-N-Match mode
