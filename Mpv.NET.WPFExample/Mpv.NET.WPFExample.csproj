@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FE66FA3-7AC7-474E-B0F9-A052EACDD62C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VideoPlayer</RootNamespace>
+    <AssemblyName>SceneIt.VideoPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="lib\ytdl_hook.lua">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mpv.NET\Mpv.NET.csproj">
+      <Project>{02d1e0d1-d9c6-4e2a-a598-7eca726b7166}</Project>
+      <Name>Mpv.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\mpv-1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\youtube-dl.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\GameMenu.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\MainMenu.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\MainMenuFirstTime.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\OptreveLogo.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\PartyPlayFakeMenu.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\Question1.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\ScreenlifeLogo.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak1.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak10.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak10\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak10\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak10\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak10\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak11.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak11\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak11\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak11\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak11\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak12.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak12\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak12\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak12\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak12\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak13.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak13\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak13\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak13\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak13\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak14.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak14\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak14\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak14\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak14\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak1\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak1\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak1\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak1\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak2.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak2\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak2\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak2\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak2\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak3.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak3\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak3\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak3\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak3\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak4.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak4\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak4\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak4\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak4\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak5.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak5\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak5\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak5\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak5\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak6.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak6\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak6\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak6\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak6\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak7.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak7\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak7\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak7\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak7\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak8.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak8\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak8\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak8\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak8\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak9.mkv" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak9\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak9\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Tiebreaks\Tiebreak9\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Tiebreaks\Tiebreak9\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Timers\10Sec.mkv" />
+    <Content Include="Resources\Bond_Special\Timers\10Sec\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Timers\10Sec\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Timers\10Sec\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Timers\10Sec\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Timers\20Sec.mkv" />
+    <Content Include="Resources\Bond_Special\Timers\20Sec\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Timers\20Sec\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Timers\20Sec\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Timers\20Sec\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\Timers\30Sec.mkv" />
+    <Content Include="Resources\Bond_Special\Timers\30Sec\AudioFile_80.ac3" />
+    <Resource Include="Resources\Bond_Special\Timers\30Sec\Celltimes.txt" />
+    <Resource Include="Resources\Bond_Special\Timers\30Sec\LogFile.txt" />
+    <Content Include="Resources\Bond_Special\Timers\30Sec\VideoFile.m2v" />
+    <Content Include="Resources\Bond_Special\ToAPTW.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bond_Special\ToGameMenu.mkv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Bond_Special\Collectors\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

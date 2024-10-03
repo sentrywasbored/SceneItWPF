@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "J:\\SceneItPlayer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FE66FA3-7AC7-474E-B0F9-A052EACDD62C}|Mpv.NET.WPFExample\\Mpv.NET.WPFExample.csproj|j:\\sceneitplayer\\mpv.net.wpfexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FE66FA3-7AC7-474E-B0F9-A052EACDD62C}|Mpv.NET.WPFExample\\Mpv.NET.WPFExample.csproj|solutionrelative:mpv.net.wpfexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "J:\\SceneItPlayer\\Mpv.NET.WPFExample\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Mpv.NET.WPFExample\\MainWindow.xaml.cs",
+              "ToolTip": "J:\\SceneItPlayer\\Mpv.NET.WPFExample\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Mpv.NET.WPFExample\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwEQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T02:36:14.523Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
